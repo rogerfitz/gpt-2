@@ -6,6 +6,12 @@ For now, we have only released a smaller (117M parameter) version of GPT-2.
 
 See more details in our [blog post](https://blog.openai.com/better-language-models/).
 
+## DATA
+
+We created a new dataset which emphasizes diversity of content, by scraping content from the Internet. In order to preserve document quality, we used only pages which have been curated/filtered by humans — specifically, we used outbound links from Reddit which received at least 3 karma. This can be thought of as a heuristic indicator for whether other users found the link interesting (whether educational or funny), leading to higher data quality than other similar datasets, such as CommonCrawl. ↩︎
+
+Note that while we have hand-chosen these samples, and are thus engaging in some meta-cherry-picking, we believe they are not too unrepresentative of the sampling process. We are simply using top-k truncated sampling, and have yet to explore more advanced methods of sampling (such as beam-search methods). ↩︎
+
 ## Installation
 
 Git clone this repository, and `cd` into directory for remaining commands
